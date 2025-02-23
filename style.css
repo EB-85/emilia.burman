@@ -58,3 +58,18 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .service-box, .contact-box {
+        width: 60%;
+    }
+}
