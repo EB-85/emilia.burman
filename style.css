@@ -1,75 +1,110 @@
-/* Perusasetukset - Mobile First */
+/* Yleiset tyylit */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Canva Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ECF0F1;
     color: #595757;
 }
 
-/* Yläpalkki ja navigaatio */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
     background-color: #0A335D;
-    color: #FFFFFF;
-    padding: 15px;
+    padding: 20px 0;
     text-align: center;
+    color: #ECF0F1;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
-    display: block; /* Mobiilissa linkit allekkain */
-    margin: 10px 0;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: #ECF0F1;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* Pääsisältö */
-main {
+/* Hero-osio */
+.hero {
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
+    background-color: #DBD2CD;
 }
 
-/* Painikkeet */
+.hero h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 42px;
+    color: #0A335D;
+}
+
 .cta-button {
     display: inline-block;
-    padding: 12px 20px;
-    background-color: #D4AF37;
-    color: #FFFFFF;
+    padding: 14px 24px;
+    background-color: #0A335D;
+    color: #ECF0F1;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 15px;
-    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Palvelut-osio */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #0A335D;
+}
+
+/* Yhteystiedot */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #0A335D;
 }
 
 /* Footer */
 footer {
     background-color: #0A335D;
-    color: #FFFFFF;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px 0;
+    color: #ECF0F1;
 }
+
+/* Responsiivisuus */
 @media screen and (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: center;
-    }
-
     nav ul li {
-        display: inline-block;
-        margin: 0 15px;
+        margin: 0 20px;
     }
+    .hero, .services, .contact {
+        padding: 80px 40px;
+    }
+}
 
-    .service-box, .contact-box {
-        width: 60%;
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+    .hero h2, .services h2, .contact h2 {
+        font-size: 48px;
     }
 }
