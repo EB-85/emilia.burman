@@ -1,99 +1,40 @@
-/* Yleiset tyylit */
-body {
-    font-family: 'Canva Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ECF0F1;
-    color: #595757;
-}
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultointipalvelut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tervetuloa Konsultointipalveluihin</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Tehoa, tasapainoa ja menestystä yrittäjille</h2>
+                <p>Autamme pienyrittäjiä kehittämään liiketoimintaansa, palveluitaan ja hyvinvointiaan.</p>
+                <a href="palvelut.html" class="cta-button">Tutustu palveluihin</a>
+            </div>
+        </section>
+    </main>
 
-/* Header */
-header {
-    background-color: #0A335D;
-    padding: 20px 0;
-    text-align: center;
-    color: #ECF0F1;
-}
+    <footer>
+        <div class="container">
+            <p>© 2025 Konsultointipalvelut</p>
+        </div>
+    </footer>
+</body>
+</html>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ECF0F1;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Hero-osio */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #DBD2CD;
-}
-
-.hero h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 42px;
-    color: #0A335D;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 14px 24px;
-    background-color: #0A335D;
-    color: #ECF0F1;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* Palvelut-osio */
-.services {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.services h2 {
-    font-size: 36px;
-    color: #0A335D;
-}
-
-/* Footer */
-footer {
-    background-color: #0A335D;
-    text-align: center;
-    padding: 20px 0;
-    color: #ECF0F1;
-}
-
-/* Responsiivisuus */
-@media screen and (min-width: 768px) {
-    nav ul li {
-        margin: 0 20px;
-    }
-    .hero, .services {
-        padding: 80px 40px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .container {
-        width: 80%;
-    }
-    .hero h2, .services h2 {
-        font-size: 48px;
-    }
-}
