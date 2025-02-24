@@ -135,6 +135,50 @@ nav ul li a {
     max-width: 400px;
     height: auto;
 }
+/* Palvelut-sivun layout */
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Tekstin leveys */
+.service-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Kuvan leveys */
+.service-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Mobiiliresponsiivisuus */
+@media screen and (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-text, .service-image {
+        max-width: 100%;
+    }
+
+    .service-image img {
+        max-width: 300px;
+    }
+}
 
 
 /* Yhteydenottosivun layout */
