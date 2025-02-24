@@ -90,12 +90,12 @@ nav ul li a {
     justify-content: center;
 }
 
-/* Teksti keskelle */
-.services-content {
-    max-width: 800px;
-    margin: 40px auto; /* Keskittää tekstin */
-    text-align: center;
-    padding: 20px;
+.services-content ul {
+    list-style-type: disc; /* Käyttää tavallisia pisteitä */
+    padding-left: 40px; /* Siirtää listaa hieman oikealle */
+    text-align: left; /* Varmistaa, että teksti pysyy vasemmalla */
+    max-width: 800px; /* Pitää tekstin luettavana */
+    margin: 0 auto; /* Keskittää listan */
 }
 
 /* Yhteydenottosivun layout */
