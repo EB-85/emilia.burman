@@ -79,43 +79,23 @@ nav ul li a {
 }
 
 /* Palvelut-sivun layout */
-.services-container {
+.services-header {
+    width: 100%;
+    height: 300px; /* Kuva saa kiinteän korkeuden */
+    background-image: url("palvelut.png"); /* Asetetaan taustakuvaksi */
+    background-size: cover; /* Varmistaa, että kuva kattaa koko alueen */
+    background-position: center; /* Kohdistaa kuvan keskelle */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    flex-direction: row;
+    justify-content: center;
 }
 
+/* Teksti keskelle */
 .services-content {
-    flex: 1;
-    max-width: 600px;
-}
-
-.services-content h2 {
-    font-size: 32px;
-    color: var(--primary-color);
-}
-
-.services-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.services-image {
-    flex: 1;
-    max-width: 400px;
-    text-align: left;
-}
-
-.services-image img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 5px;
+    max-width: 800px;
+    margin: 40px auto; /* Keskittää tekstin */
+    text-align: center;
+    padding: 20px;
 }
 
 /* Yhteydenottosivun layout */
@@ -214,8 +194,8 @@ footer {
     }
 
     .contact-container {
-        flex-direction: column;
-        text-align: center;
+        .services-header {
+        height: 200px;
     }
 }
 
@@ -241,4 +221,11 @@ footer {
         max-width: 150px;
     }
 }
+    @media screen and (max-width: 768px) {
+    .services-header {
+        height: 200px; /* Pienempi korkeus mobiilissa */
+    }
+
+    .services-content {
+        max-width: 90%;
 
