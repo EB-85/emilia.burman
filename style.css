@@ -122,7 +122,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px; /* Pienennetään leveys tasapainoisemmaksi */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -130,18 +130,13 @@ nav ul li a {
 /* Lomake */
 .contact-form {
     flex: 1;
-    max-width: 400px; /* Pienennetään lomaketta hieman */
+    max-width: 450px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Kuva pienemmäksi ja linjattavaksi */
-.contact-img {
-    flex: 1;
-    max-width: 250px; /* Nyt kuva on selkeästi pienempi */
-    text-align: center;
 }
 
 .contact-img img {
