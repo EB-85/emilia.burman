@@ -63,6 +63,13 @@ nav ul li a {
     align-items: center;
     justify-content: center;
 }
+    
+.hero-img {
+    max-width: 100%;  /* Kuvan maksimileveys on 100% kontista */
+    height: auto;     /* Säilyttää kuvasuhteen */
+    display: block;   /* Estää ylimääräisen marginaalin */
+    margin: 0 auto;   /* Keskittää kuvan */
+}
 
 
 .hero h2 {
