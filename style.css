@@ -122,32 +122,35 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 800px; /* Pienennetään leveys tasapainoisemmaksi */
     margin: 0 auto;
     padding: 40px 20px;
 }
 
+/* Lomake */
 .contact-form {
     flex: 1;
-    max-width: 450px; /* Lomakkeen leveys */
+    max-width: 400px; /* Pienennetään lomaketta hieman */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Kuva pienemmäksi ja linjattavaksi */
 .contact-img {
     flex: 1;
-    max-width: 350px; 
+    max-width: 250px; /* Nyt kuva on selkeästi pienempi */
     text-align: center;
 }
 
 .contact-img img {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px; /* Kuvan enimmäisleveys */
     height: auto;
     border-radius: 5px;
 }
+
 
 /* Footer */
 footer {
