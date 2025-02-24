@@ -32,6 +32,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -50,27 +51,16 @@ nav ul li a {
     text-align: center;
     padding: 50px 20px;
     background-color: var(--secondary-color);
-    .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: var(--secondary-color);
-    background-image: url('images/hero-kuva.jpg'); /* Muuta tähän oikea polku */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px; /* Voit säätää korkeutta */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-    
-.hero-img {
-    max-width: 100%;  /* Kuvan maksimileveys on 100% kontista */
-    height: auto;     /* Säilyttää kuvasuhteen */
-    display: block;   /* Estää ylimääräisen marginaalin */
-    margin: 0 auto;   /* Keskittää kuvan */
+    position: relative;
 }
 
+.hero img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 .hero h2 {
     font-family: 'Lato', sans-serif;
@@ -86,50 +76,12 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-}
-
-/* Palvelut-osio */
-.services {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: var(--secondary-color);
-}
-
-.services h2 {
-    font-size: 36px;
-    color: var(--primary-color);
-}
-
-.services ul {
-    list-style: none;
-    padding: 0;
-}
-
-.services ul li {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 8px 12px; /* Lyhyempi ja paremmin erottuva */
-    margin: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block; /* Tehostevärilliset bulletit näyttävät siistimmiltä */
-}
-
-/* Ota yhteyttä -nappi palvelut-sivulle */
-.services .cta-button {
-    margin-top: 30px;
-    display: block;
-}
 /* Palvelut-sivun layout */
 .services-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -154,10 +106,11 @@ nav ul li a {
     padding-left: 20px;
 }
 
-/* Kuvan muotoilu */
+/* Palvelut-kuva */
 .services-image {
     flex: 1;
     max-width: 500px;
+    text-align: center;
 }
 
 .services-image img {
@@ -167,58 +120,6 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Yhteydenottolomake keskelle ja oikealle lisätty tyhjää */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form-container {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    background-color: var(--primary-color);
-    color: #ECF0F1;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-    .contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;  /* Lisää väliä lomakkeen ja kuvan väliin */
-}
-
-.contact-form {
-    width: 50%; /* Lomake vie puolet tilasta */
-}
-
-.contact-img {
-    width: 40%; /* Kuva vie 40% */
-}
 /* Yhteydenottosivun layout */
 .contact-container {
     display: flex;
@@ -244,15 +145,15 @@ nav ul li a {
 .contact-image {
     flex: 1;
     max-width: 500px;
+    text-align: center;
 }
 
 .contact-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 5px;
 }
-
 
 /* Footer */
 footer {
@@ -263,20 +164,31 @@ footer {
 }
 
 /* Responsiivisuus */
-@media screen and (min-width: 768px) {
-    nav ul li {
-        margin: 0 20px;
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 85%;
     }
-    .hero, .services {
-        padding: 80px 40px;
+
+    .hero h2, .services h2 {
+        font-size: 36px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .container {
-        width: 80%;
+@media screen and (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
     }
-    .hero h2, .services h2 {
-        font-size: 48px;
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 90%;
     }
 }
