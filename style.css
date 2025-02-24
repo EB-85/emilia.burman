@@ -119,41 +119,55 @@ nav ul li a {
     height: auto;
     border-radius: 5px;
 }
+.services {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.services ul {
+    padding-left: 20px;
+}
+
+.service-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+    height: auto;
+}
+
 
 /* Yhteydenottosivun layout */
 .contact-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
+    justify-content: space-between;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* Lomake boksin sisällä */
 .contact-form {
     flex: 1;
-    max-width: 500px;
+    max-width: 450px; /* Lomakkeen leveys */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Kuva skaalautuu paremmin */
-.contact-image {
+/* Kuva pienemmäksi */
+.contact-img {
     flex: 1;
-    max-width: 500px;
-    text-align: center;
+    max-width: 350px; 
 }
 
-.contact-image img {
+.contact-img img {
     width: 100%;
-    max-width: 350px;
     height: auto;
     border-radius: 5px;
 }
+
 
 /* Footer */
 footer {
