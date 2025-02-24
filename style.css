@@ -50,7 +50,20 @@ nav ul li a {
     text-align: center;
     padding: 50px 20px;
     background-color: var(--secondary-color);
+    .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    background-image: url('images/hero-kuva.jpg'); /* Muuta tähän oikea polku */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; /* Voit säätää korkeutta */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .hero h2 {
     font-family: 'Lato', sans-serif;
