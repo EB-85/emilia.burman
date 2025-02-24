@@ -112,11 +112,16 @@ nav ul li a {
 /* Lomake boksissa */
 .contact-form {
     flex: 1;
-    max-width: 450px;
-    padding: 20px;
+    max-width: 500px;
+    padding: 30px;
     background-color: #ffffff;
-    border-radius: 10px; /* Pehmeämmät reunat */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Hieman vahvempi varjo */
+    border-radius: 12px; /* Pehmeämmät kulmat */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Syvempi varjo */
+    transition: all 0.3s ease-in-out; /* Pehmeä hover-efekti */
+}
+
+.contact-form:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Tekstikenttien asettelu */
@@ -124,10 +129,20 @@ nav ul li a {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 12px;
+    border: 2px solid #D3D3D3;
+    border-radius: 8px;
     font-size: 16px;
+    background-color: #F9F9F9;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Lähetä-painike */
@@ -137,20 +152,20 @@ nav ul li a {
     padding: 12px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hover-efekti painikkeelle */
 .contact-form button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
 /* Kuva */
 .contact-img {
     flex: 1;
-    max-width: 250px;
+    max-width: 350px;
     text-align: left;
 }
 
@@ -158,6 +173,7 @@ nav ul li a {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Mobiilinäkymän korjaus */
