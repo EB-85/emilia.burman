@@ -122,13 +122,14 @@ nav ul li a {
 .contact-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1000px; 
+    justify-content: center; /* Asettaa lomakkeen ja kuvan keskitetysti */
+    gap: 40px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* Lomake */
+/* Lomake boksissa */
 .contact-form {
     flex: 1;
     max-width: 450px;
@@ -138,13 +139,52 @@ nav ul li a {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Tekstikenttien asettelu */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Lähetä-painike */
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Pienennetään kuvaa */
+.contact-img {
+    flex: 1;
+    max-width: 250px; /* Pienennetty kuva */
+    text-align: center;
 }
 
 .contact-img img {
     width: 100%;
-    max-width: 250px; /* Kuvan enimmäisleveys */
+    max-width: 200px; 
     height: auto;
     border-radius: 5px;
+}
+
+/* Mobiilinäkymän korjaus */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-img img {
+        max-width: 150px; 
+    }
+}
+
 }
 
 
@@ -179,6 +219,7 @@ footer {
 
     .contact-container {
         flex-direction: column;
+        text-align: center;
     }
 
     .contact-form {
@@ -190,7 +231,7 @@ footer {
     }
 
     .contact-img img {
-        max-width: 250px;
+        max-width: 150px;
     }
 }
 
