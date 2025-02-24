@@ -159,6 +159,21 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
 }
+    .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;  /* Lisää väliä lomakkeen ja kuvan väliin */
+}
+
+.contact-form {
+    width: 50%; /* Lomake vie puolet tilasta */
+}
+
+.contact-img {
+    width: 40%; /* Kuva vie 40% */
+}
+
 
 /* Footer */
 footer {
