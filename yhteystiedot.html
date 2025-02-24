@@ -21,22 +21,27 @@
     </header>
 
     <main>
-        <section class="container">
-            <h2>Yhteystiedot</h2>
-            <p>Voit ottaa yhteyttä sähköpostilla tai täyttämällä yhteydenottolomakkeen.</p>
+       <section class="contact-form">
+    <h2>Ota yhteyttä</h2>
+    <form action="mailto:sinun.sähköpostisi@example.com" method="post" enctype="text/plain">
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Viesti:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Lähetä</button>
+    </form>
+</section>
 
-            <p>📧 Sähköposti: <a href="mailto:info@etunimisukunimi.fi">info@etunimisukunimi.fi</a></p>
-            <p>📞 Puhelin: <a href="tel:+358401234567">+358 40 123 4567</a></p>
-
-            <h3>Seuraa meitä</h3>
-            <a href="#" target="_blank">Instagram</a> | 
-            <a href="#" target="_blank">LinkedIn</a>
-        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 Konsultointipalvelut</p>
+            <p>© 2025 Emilia Burman</p>
         </div>
     </footer>
 </body>
