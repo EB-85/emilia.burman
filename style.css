@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 /* Palvelut-sivun layout */
-.services {
+.services-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
