@@ -82,15 +82,17 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Palvelut-sivun yläkuva */
+/* Palvelut-sivun yläkuva (kuva pienemmäksi) */
 .services-header {
     width: 100%;
-    text-align: center; /* Keskittää kuvan */
+    height: 250px; /* Rajoittaa kuvan korkeutta */
+    overflow: hidden; /* Estää venymisen */
 }
 
 .services-header img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Skaalaa koko alueelle */
+    object-fit: cover; /* Pitää kuvan tasapainossa */
     display: block;
 }
 
