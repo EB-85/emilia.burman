@@ -107,7 +107,54 @@ nav ul li a {
     padding-left: 40px; /* Siirtää listaa hieman oikealle */
     margin: 20px 0; /* Lisää välit listojen ympärille */
 }
+/* Palvelut-sivun yläkuva */
+.services-header {
+    width: 100%;
+    height: auto;
+    text-align: center; /* Keskittää kuvan */
+}
 
+.services-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tekstien laatikko */
+.services-container {
+    display: flex;
+    justify-content: center; /* Keskittää laatikon */
+    padding: 40px 20px;
+}
+
+.services-box {
+    background: white; /* Valkoinen tausta */
+    padding: 40px;
+    max-width: 800px; /* Pitää sisällön keskitettynä */
+    border-radius: 10px; /* Pyöristetyt reunat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Kevyt varjo */
+    text-align: center; /* Keskittää otsikot */
+}
+
+/* Bullet-listat */
+.services-box ul {
+    text-align: left; /* Pidä luettavana */
+    list-style-type: disc; /* Normaali bulletpoint */
+    padding-left: 40px; /* Ei liikaa marginaalia */
+    margin: 20px 0; /* Lisää tasaiset välit */
+}
+
+/* CTA-painike */
+.cta-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: var(--primary-color);
+    color: #ECF0F1;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
 
 /* Yhteydenottosivun layout */
 .contact-container {
