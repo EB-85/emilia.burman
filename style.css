@@ -393,4 +393,44 @@ nav {
         display: flex; /* Näytetään kun käyttäjä avaa valikon */
     }
 }
+/* Hampurilaisvalikon perusasetukset */
+.nav-toggle {
+    display: none; /* Piilotetaan oletuksena */
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Mobiilinäkymä (hampurilaisvalikko tulee näkyviin) */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Näytetään mobiilissa */
+    }
+
+    .nav-links {
+        display: none; /* Piilotetaan valikko mobiilissa */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Näytetään kun valikko on avattu */
+    }
+}
