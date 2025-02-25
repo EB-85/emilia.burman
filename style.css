@@ -97,6 +97,28 @@ nav ul li a {
     max-width: 800px; /* Pitää tekstin luettavana */
     margin: 0 auto; /* Keskittää listan */
 }
+.services-header {
+    position: relative;
+    width: 100%;
+}
+
+.services-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 
 /* Yhteydenottosivun layout */
 .contact-container {
