@@ -64,6 +64,20 @@
     <footer>
         <p>&copy; 2025 Emilia Burman</p>
     </footer>
+    <script>
+    function loadHeader() {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.body.insertAdjacentHTML("afterbegin", data));
+    }
+    loadHeader();
+
+    function toggleMenu() {
+        var menu = document.querySelector(".nav-links");
+        menu.classList.toggle("active");
+    }
+</script>
+
 </body>
 </html>
 
