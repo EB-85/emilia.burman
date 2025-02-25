@@ -13,112 +13,117 @@ body {
     margin: 0 auto;
 }
 
-/* Tehostevärit */
+/* Väriteemat */
 :root {
     --primary-color: #0A335D;
     --secondary-color: #DBD2CD;
-    --accent-color: #D4AF37; /* Pehmeä kullansävy */
+    --accent-color: #D4AF37;
     --text-color: #595757;
 }
 
-/* Header */
+/* ====== NAVIGAATIO (HEADER) ====== */
 header {
     background-color: var(--primary-color);
-    padding: 20px 0;
+    padding: 15px 0;
+    color: white;
     text-align: center;
-    color: #ECF0F1;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    text-align: center;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ECF0F1;
+    color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-/* Hero-osio */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: var(--secondary-color);
-    position: relative;
+/* ====== HAMPURILAISVALIKKO ====== */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
 }
 
-.hero img {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* Mobiilissa piilotettu valikko */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
 }
 
-.hero h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 42px;
-    color: var(--primary-color);
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 14px 24px;
-    background-color: var(--primary-color);
-    color: #ECF0F1;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.contact-form button:hover {
-    background-color: var(--accent-color);
-    transform: scale(1.05);
-}
-
-/* Palvelut-sivun yläkuva (kuva pienemmäksi) */
+/* ====== PALVELUT-SIVU ====== */
 .services-header {
     width: 100%;
-    height: 250px; /* Rajoittaa kuvan korkeutta */
-    overflow: hidden; /* Estää venymisen */
+    height: 250px;
+    overflow: hidden;
 }
 
 .services-header img {
     width: 100%;
-    height: 100%; /* Skaalaa koko alueelle */
-    object-fit: cover; /* Pitää kuvan tasapainossa */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-/* Palvelut-sivun sisältöalue */
+/* Tekstilaatikko */
 .services-container {
     display: flex;
-    justify-content: center; /* Keskittää laatikon */
+    justify-content: center;
     padding: 40px 20px;
 }
 
-/* Tekstien laatikko */
 .services-box {
-    background: white; /* Valkoinen tausta */
+    background: white;
     padding: 40px;
-    max-width: 800px; /* Pitää sisällön keskitettynä */
-    border-radius: 10px; /* Pyöristetyt reunat */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Kevyt varjo */
-    text-align: center; /* Keskittää otsikot */
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Bullet-listat */
 .services-box ul {
-    text-align: left; /* Pidä luettavana */
-    list-style-type: disc; /* Normaali bulletpoint */
-    padding-left: 40px; /* Ei liikaa marginaalia */
-    margin: 20px 0; /* Lisää tasaiset välit */
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 20px 0;
 }
 
 /* CTA-painike */
@@ -126,47 +131,44 @@ nav ul li a {
     display: inline-block;
     padding: 14px 24px;
     background-color: var(--primary-color);
-    color: #ECF0F1;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
     font-weight: bold;
 }
 
-/* Hover-efekti painikkeelle */
 .cta-button:hover {
     background-color: var(--accent-color);
     transform: scale(1.05);
 }
 
-
-/* Yhteydenottosivun layout */
+/* ====== YHTEYDENOTTOSIVU ====== */
 .contact-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Asettaa lomakkeen ja kuvan keskitetysti */
+    justify-content: center;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* Lomake boksissa */
+/* Lomake */
 .contact-form {
     flex: 1;
     max-width: 500px;
     padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px; /* Pehmeämmät kulmat */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Syvempi varjo */
-    transition: all 0.3s ease-in-out; /* Pehmeä hover-efekti */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form:hover {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Tekstikenttien asettelu */
+/* Tekstikentät */
 .contact-form input, 
 .contact-form textarea {
     width: 100%;
@@ -176,13 +178,12 @@ nav ul li a {
     border-radius: 8px;
     font-size: 16px;
     background-color: #F9F9F9;
-    transition: all 0.3s ease-in-out;
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
     border-color: var(--primary-color);
-    background-color: #ffffff;
+    background-color: white;
     outline: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -196,7 +197,6 @@ nav ul li a {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
 
 .contact-form button:hover {
@@ -207,472 +207,40 @@ nav ul li a {
 /* Kuva */
 .contact-img {
     flex: 1;
-    max-width: 350px;
+    max-width: 400px;
     text-align: left;
 }
 
 .contact-img img {
     width: 100%;
-    height: auto;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobiilinäkymän korjaus */
+/* ====== MOBIILIKORJAUKSET ====== */
 @media screen and (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         text-align: center;
     }
 
+    .contact-img {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .contact-img img {
-        max-width: 150px; 
+        max-width: 100%;
+        height: auto;
     }
 }
 
-}
-
-
-/* Footer */
+/* ====== FOOTER ====== */
 footer {
     background-color: var(--primary-color);
     text-align: center;
     padding: 20px 0;
-    color: #ECF0F1;
-}
-
-/* Responsiivisuus */
-@media screen and (max-width: 1024px) {
-    .container {
-        width: 85%;
-    }
-
-    .hero h2, .services h2 {
-        font-size: 36px;
-    }
-
-    .contact-container {
-        .services-header {
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .services {
-        flex-direction: column;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-form {
-        width: 90%;
-    }
-
-    .services-image img {
-        max-width: 300px;
-    }
-
-    .contact-img img {
-        max-width: 150px;
-    }
-}
-    @media screen and (max-width: 768px) {
-    .services-header {
-        height: 200px; /* Pienempi korkeus mobiilissa */
-    }
- }
-    .services-content {
-        max-width: 90%;
-        
-        /* Yhteydenottosivun kuvan koko mobiilissa */
-@media screen and (max-width: 768px) {
-    .contact-img img {
-        max-width: 100%; /* Skaalaa leveys täysleveäksi */
-        height: auto; /* Säilyttää oikean mittasuhteen */
-    }
-
-    .contact-img {
-        max-width: 400px; /* Tee kuvasta isompi */
-        margin: 0 auto; /* Keskittää kuvan */
-        text-align: center; /* Varmistaa, että kuva pysyy keskellä */
-    }
-}
-/* Hampurilaisvalikon perusasettelu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
     color: white;
 }
 
-/* Navigaation perusasetukset */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Mobiilinäkymä */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Näytä hampurilaisvalikko */
-    }
-
-    nav ul {
-        display: none; /* Piilota valikko oletuksena */
-        flex-direction: column;
-        background: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    nav ul.show {
-        display: flex; /* Näytä valikko kun klikataan */
-    }
-
-    nav ul li {
-        padding: 10px 0;
-    }
-}
-/* Perusnavigaatio */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Hampurilaisvalikon nappi (piilotetaan tietokoneella) */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Mobiilinavigaatio */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none; /* Piilottaa valikon oletuksena */
-        flex-direction: column;
-        background-color: #0A335D; /* Sama väri kuin header */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links li {
-        padding: 15px;
-    }
-
-    .menu-toggle {
-        display: block; /* Näytetään hampurilaisvalikko mobiilissa */
-    }
-
-    .nav-links.active {
-        display: flex; /* Näytetään kun käyttäjä avaa valikon */
-    }
-}
-/* Hampurilaisvalikon perusasetukset */
-.nav-toggle {
-    display: none; /* Piilotetaan oletuksena */
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    text-align: center;
-}
-
-/* Mobiilinäkymä (hampurilaisvalikko tulee näkyviin) */
-@media screen and (max-width: 768px) {
-    .nav-toggle {
-        display: block; /* Näytetään mobiilissa */
-    }
-
-    .nav-links {
-        display: none; /* Piilotetaan valikko mobiilissa */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        padding: 20px;
-    }
-
-    .nav-links.active {
-        display: flex; /* Näytetään kun valikko on avattu */
-    }
-}
-/* Navigaatio ja hampurilaisvalikko */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Hampurilaisvalikon piilotus oletuksena */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Mobiilinäkymä */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
-/* Navigaatio ja hampurilaisvalikko */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Hampurilaisvalikon piilotus oletuksena */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Mobiilinäkymä */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
-/* Navigaatio ja hampurilaisvalikko */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Hampurilaisvalikon piilotus oletuksena */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Mobiilinäkymä */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
-        /* Yläpalkki */
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #0A335D;
-    color: white;
-}
-
-/* Piilota valikko oletuksena mobiilissa */
-.nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #0A335D;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-links.active {
-    display: flex;
-}
-
-.nav-links li {
-    padding: 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Hampurilaisikonin tyyli */
-.menu-toggle {
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-}
-
-/* Näytetään hampurilaisvalikko vain mobiilissa */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
-/* Yhteydenottosivun kuva */
-.contact-img img {
-    width: 100%; /* Skaalaa kuvan täyttämään tilan */
-    max-width: 400px; /* Estää liiallisen suurenemisen */
-    height: auto; /* Säilyttää kuvan mittasuhteet */
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto; /* Keskittää kuvan */
-}
-
-/* Mobiilinäkymässä suurennetaan kuvaa */
-@media screen and (max-width: 768px) {
-    .contact-img img {
-        max-width: 90%; /* Suurempi kuva mobiilissa */
-    }
-}
