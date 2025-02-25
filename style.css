@@ -300,4 +300,57 @@ footer {
         text-align: center; /* Varmistaa, että kuva pysyy keskellä */
     }
 }
+/* Hampurilaisvalikon perusasettelu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
+/* Navigaation perusasetukset */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Mobiilinäkymä */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Näytä hampurilaisvalikko */
+    }
+
+    nav ul {
+        display: none; /* Piilota valikko oletuksena */
+        flex-direction: column;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Näytä valikko kun klikataan */
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+}
 
