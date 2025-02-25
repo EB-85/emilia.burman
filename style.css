@@ -22,36 +22,43 @@ body {
 }
 
 /* ====== NAVIGAATIO (HEADER) ====== */
-header {
-    background-color: var(--primary-color);
-    padding: 15px 0;
-    color: white;
+/* Hero-osio */
+.hero {
     text-align: center;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
     position: relative;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+.hero img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.hero h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 42px;
+    color: var(--primary-color);
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
+.cta-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: var(--primary-color);
+    color: #ECF0F1;
     text-decoration: none;
-    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+
 
 /* ====== HAMPURILAISVALIKKO ====== */
 .menu-toggle {
