@@ -660,4 +660,19 @@ nav {
         display: block;
     }
 }
+/* Yhteydenottosivun kuva */
+.contact-img img {
+    width: 100%; /* Skaalaa kuvan täyttämään tilan */
+    max-width: 400px; /* Estää liiallisen suurenemisen */
+    height: auto; /* Säilyttää kuvan mittasuhteet */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Keskittää kuvan */
+}
 
+/* Mobiilinäkymässä suurennetaan kuvaa */
+@media screen and (max-width: 768px) {
+    .contact-img img {
+        max-width: 90%; /* Suurempi kuva mobiilissa */
+    }
+}
