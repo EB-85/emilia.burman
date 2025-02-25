@@ -6,53 +6,36 @@
     <title>Yhteystiedot | Konsultointipalvelut</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-    function toggleMenu() {
-        document.querySelector(".nav-links").classList.toggle("show");
-    }
-</script>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>Ota yhteyttä</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Etusivu</a></li>
-                    <li><a href="palvelut.html">Palvelut</a></li>
-                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    <!-- Tänne ladataan dynaaminen header -->
+    <header></header>
 
     <main>
-    <section class="contact-container">
-    <!-- Lomake vasemmalle -->
-    <div class="contact-form">
-        <h2>Ota yhteyttä</h2>
-        <form>
-            <label for="name">Nimi:</label>
-            <input type="text" id="name" name="name" required>
+        <section class="contact-container">
+            <!-- Lomake vasemmalle -->
+            <div class="contact-form">
+                <h2>Ota yhteyttä</h2>
+                <form>
+                    <label for="name">Nimi:</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="email">Sähköposti:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">Sähköposti:</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="message">Viesti:</label>
-            <textarea id="message" name="message" required></textarea>
+                    <label for="message">Viesti:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Lähetä</button>
-        </form>
-    </div>
+                    <button type="submit">Lähetä</button>
+                </form>
+            </div>
 
-
-    <div class="contact-img">
-        <img src="Yhteystiedot kuva.png" alt="Yhteystiedot">
-    </div>
-</section>
-
-</section>
-
+            <!-- Kuva oikealle -->
+            <div class="contact-img">
+                <img src="yhteystiedot.png" alt="Yhteystiedot">
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -60,20 +43,25 @@
             <p>© 2025 Emilia Burman</p>
         </div>
     </footer>
-    <script>
-    function loadHeader() {
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.body.insertAdjacentHTML("afterbegin", data));
-    }
-    loadHeader();
 
-    function toggleMenu() {
-        var menu = document.querySelector(".nav-links");
-        menu.classList.toggle("active");
-    }
-</script>
+    <!-- JavaScript ladataan tänne -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ladataan header.html dynaamisesti
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector("header").innerHTML = data;
+                });
+
+            // Hampurilaisvalikon toiminta
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("menu-toggle")) {
+                    document.querySelector(".nav-links").classList.toggle("active");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
-
