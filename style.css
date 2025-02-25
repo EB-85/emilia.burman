@@ -283,6 +283,21 @@ footer {
     .services-header {
         height: 200px; /* Pienempi korkeus mobiilissa */
     }
-
+ }
     .services-content {
         max-width: 90%;
+        
+        /* Yhteydenottosivun kuvan koko mobiilissa */
+@media screen and (max-width: 768px) {
+    .contact-img img {
+        max-width: 100%; /* Skaalaa leveys täysleveäksi */
+        height: auto; /* Säilyttää oikean mittasuhteen */
+    }
+
+    .contact-img {
+        max-width: 400px; /* Tee kuvasta isompi */
+        margin: 0 auto; /* Keskittää kuvan */
+        text-align: center; /* Varmistaa, että kuva pysyy keskellä */
+    }
+}
+
