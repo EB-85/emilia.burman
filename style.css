@@ -30,6 +30,7 @@ body {
     position: relative;
 }
 
+/* Hero-kuva */
 .hero img {
     width: 100%;
     max-width: 1200px;
@@ -38,12 +39,15 @@ body {
     margin: 0 auto;
 }
 
+/* Otsikko */
 .hero h2 {
     font-family: 'Lato', sans-serif;
     font-size: 42px;
     color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
+/* Call to Action (CTA) -painike */
 .cta-button {
     display: inline-block;
     padding: 14px 24px;
@@ -52,10 +56,36 @@ body {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    margin-bottom: 40px; /* ✅ Lisää tilaa painikkeen alle */
 }
-.contact-form button:hover {
+
+/* Hover-efekti painikkeelle */
+.cta-button:hover {
     background-color: var(--accent-color);
     transform: scale(1.05);
+}
+
+/* 🔹 Mobiiliasetukset (max 768px) */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        margin-top: 15px;
+        margin-bottom: 50px; /* ✅ Lisää vielä hieman enemmän tilaa mobiilissa */
+    }
 }
 
 
