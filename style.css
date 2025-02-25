@@ -77,6 +77,10 @@ nav ul li a {
     border-radius: 5px;
     margin-top: 20px;
 }
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
 
 /* Palvelut-sivun yläkuva */
 .services-header {
@@ -154,6 +158,10 @@ nav ul li a {
     border-radius: 5px;
     margin-top: 20px;
     font-weight: bold;
+}
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
 /* Yhteydenottosivun layout */
