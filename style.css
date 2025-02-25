@@ -611,3 +611,53 @@ nav {
         margin: 10px 0;
     }
 }
+        /* Yläpalkki */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0A335D;
+    color: white;
+}
+
+/* Piilota valikko oletuksena mobiilissa */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0A335D;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    padding: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hampurilaisikonin tyyli */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Näytetään hampurilaisvalikko vain mobiilissa */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
