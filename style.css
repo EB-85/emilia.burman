@@ -353,4 +353,44 @@ nav ul li a {
         padding: 10px 0;
     }
 }
+/* Perusnavigaatio */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hampurilaisvalikon nappi (piilotetaan tietokoneella) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobiilinavigaatio */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Piilottaa valikon oletuksena */
+        flex-direction: column;
+        background-color: #0A335D; /* Sama väri kuin header */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block; /* Näytetään hampurilaisvalikko mobiilissa */
+    }
+
+    .nav-links.active {
+        display: flex; /* Näytetään kun käyttäjä avaa valikon */
+    }
+}
 
