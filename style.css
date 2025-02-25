@@ -81,29 +81,22 @@ nav ul li a {
 /* Palvelut-sivun layout */
 .services-header {
     width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.services-header img {
-    width: 100%;
-    max-height: 300px; /* Rajoittaa korkeutta */
-    object-fit: cover; /* Skaalaa kauniisti */
-}
-
-.services-container {
+    height: 300px; /* Kuva saa kiinteän korkeuden */
+    background-image: url("palvelut.png"); /* Asetetaan taustakuvaksi */
+    background-size: cover; /* Varmistaa, että kuva kattaa koko alueen */
+    background-position: center; /* Kohdistaa kuvan keskelle */
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Keskittää sisällön */
-    text-align: center; /* Keskittää tekstin */
-    max-width: 900px; /* Rajoittaa leveyttä */
-    margin: 0 auto; /* Keskittää koko alueen */
-    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
 }
-.services-content {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
+
+.services-content ul {
+    list-style-type: disc; /* Käyttää tavallisia pisteitä */
+    padding-left: 40px; /* Siirtää listaa hieman oikealle */
+    text-align: left; /* Varmistaa, että teksti pysyy vasemmalla */
+    max-width: 800px; /* Pitää tekstin luettavana */
+    margin: 0 auto; /* Keskittää listan */
+}
 
 /* Yhteydenottosivun layout */
 .contact-container {
@@ -251,4 +244,3 @@ footer {
 
     .services-content {
         max-width: 90%;
-
