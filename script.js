@@ -12,5 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
             menuToggle.addEventListener("click", function () {
                 navLinks.classList.toggle("active");
             });
+
+            // Sulkee valikon, kun käyttäjä klikkaa linkkiä
+            document.addEventListener("click", function (event) {
+                if (event.target.matches(".nav-links a")) {
+                    document.querySelector(".nav-links").classList.remove("active");
+                }
+            });
         });
 });
