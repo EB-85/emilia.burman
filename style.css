@@ -31,12 +31,14 @@ header {
 /* Navigaation kontti */
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* KESKITTÄÄ NAVIGAATION */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
+    gap: 20px; /* Lisää vähän tilaa otsikon ja valikon väliin */
 }
+
 
 /* Navigaation linkit */
 .nav-links {
@@ -125,7 +127,15 @@ header {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-    margin-bottom: 40px; /* ✅ Lisää tilaa painikkeen alle */
+    .cta-button {
+    margin-bottom: 50px; /* Enemmän tilaa painikkeen alle */
+}
+    /* Mobiilissa vielä enemmän tilaa */
+@media screen and (max-width: 768px) {
+    .cta-button {
+        margin-bottom: 60px; /* Lisää tilaa mobiilinäkymässä */
+    }
+}
 }
 
 /* Hover-efekti painikkeelle */
@@ -348,5 +358,14 @@ footer {
     text-align: center;
     padding: 20px 0;
     color: white;
+}
+/* Emilia Burman -otsikon linkin muotoilu */
+.logo-link {
+    color: white; /* Varmistaa valkoisen värin */
+    text-decoration: none;
+}
+
+.logo-link:hover {
+    text-decoration: underline; /* Pieni hover-efekti */
 }
 
