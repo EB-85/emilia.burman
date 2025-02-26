@@ -20,6 +20,75 @@ body {
     --accent-color: #D4AF37;
     --text-color: #595757;
 }
+/* Headerin tyylit */
+header {
+    background-color: var(--primary-color); /* Käyttää sinistä väriä */
+    padding: 20px 0;
+    text-align: center;
+    color: #ECF0F1; /* Tekstin väri valkoiseksi */
+}
+
+/* Navigaation kontti */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* Navigaation linkit */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hampurilaisvalikon piilotus oletuksena */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobiilinäkymä */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Näytetään hampurilaisvalikko mobiilissa */
+    }
+
+    .nav-links {
+        display: none; /* Piilotetaan oletuksena mobiilissa */
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
 
 /* ====== NAVIGAATIO (HEADER) ====== */
 /* Hero-osio */
