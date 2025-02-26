@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.querySelector("header").innerHTML = data;
 
-            // Haetaan juuri ladatut elementit
-            const menuToggle = document.querySelector(".menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
+            // Lisätään valikkotoiminnallisuus delegoituna, jotta se toimii myös etusivulla
+            document.body.addEventListener("click", function (event) {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navLinks = document.querySelector(".nav-links");
 
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener("click", function () {
+                if (menuToggle && navLinks && event.target === menuToggle) {
                     navLinks.classList.toggle("active");
-                });
-            }
+                }
+            });
         });
 });
 
