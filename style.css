@@ -368,35 +368,8 @@ footer {
 .logo-link:hover {
     text-decoration: underline; /* Pieni hover-efekti */
 }
-/* Emilia Burman -otsikon linkin muotoilu */
-.logo-link {
-    color: white; /* Pakottaa linkin värin valkoiseksi */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.logo-link:hover {
-    text-decoration: underline;
-}
 
 /* Estää vierailtujen linkkien (visited) muuttumisen violetiksi */
 .logo-link:visited {
     color: white;
 }
-/* Emilia Burman -otsikon linkki (navigaatiossa) */
-.logo-link {
-    color: white !important; /* Pakottaa värin valkoiseksi */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.logo-link:hover {
-    text-decoration: underline;
-}
-
-/* Estää vierailtujen linkkien muuttumisen violetiksi */
-.logo-link:visited {
-    color: white !important;
-}
-
-
