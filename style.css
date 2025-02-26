@@ -57,15 +57,15 @@ header {
     font-size: 16px;
 }
 
-/* Hampurilaisvalikon piilotus oletuksena */
+/* Hampurilaisvalikon perusasetukset */
 .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     color: white;
 }
 
-/* Mobiilinäkymä */
+/* Piilotetaan valikko oletuksena mobiilissa */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block; /* Näytetään hampurilaisvalikko mobiilissa */
@@ -81,16 +81,18 @@ header {
         width: 100%;
         text-align: center;
         padding: 10px 0;
+        z-index: 100; /* Varmistaa, että valikko näkyy päällä */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Näytetään valikko */
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 }
+
 
 /* ====== NAVIGAATIO (HEADER) ====== */
 /* Hero-osio */
