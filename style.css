@@ -381,5 +381,27 @@ footer {
     color: white !important;
     text-decoration: none;
 }
+/* Varmistaa, että logo-linkki on valkoinen kaikissa tiloissa */
+.logo-link {
+    color: white !important; /* Pakottaa värin valkoiseksi */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Poistaa violetin värin, jos linkki on jo vierailtu */
+.logo-link:visited {
+    color: white !important;
+}
+
+/* Hover-efekti */
+.logo-link:hover {
+    text-decoration: underline;
+}
+
+/* Varmistaa, että headerin otsikko pysyy valkoisena */
+.nav-container h1 a {
+    color: white !important;
+    text-decoration: none;
+}
 
 
