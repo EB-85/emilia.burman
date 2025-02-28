@@ -215,26 +215,18 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    overflow: hidden; /* Estää sisällön venymisen */
 }
 
-.about-box h3 {
-    color: var(--primary-color);
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
-.about-box p {
-    color: var(--text-color);
-    font-size: 16px;
-    line-height: 1.5;
-}
-/* Mobiili: Varmistetaan, ettei laatikko veny yli reunojen */
+/* Mobiili: korjataan leveys ja marginaalit */
 @media screen and (max-width: 768px) {
     .intro-box {
-        width: 90%; /* Supistetaan hieman mobiilissa */
-        max-width: 600px; /* Estetään liian leveä boksi */
-        margin: 40px auto; /* Tasapainotetaan mobiilissa */
-        padding: 20px; /* Pienempi padding, ettei veny liikaa */
+        width: 90%; /* Supistetaan, ettei veny reunan yli */
+        max-width: 600px; /* Rajoitetaan enimmäisleveys */
+        margin: 40px auto;
+        padding: 20px;
+        box-sizing: border-box; /* Estetään ylimääräinen leviäminen */
     }
 }
 
