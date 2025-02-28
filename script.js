@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: { "Accept": "application/json" }
             }).then(response => {
                 if (response.ok) {
-                    form.innerHTML = "<p>Kiitos! Viestisi on lähetetty onnistuneesti.</p>";
+                    form.innerHTML = "<p>Kiitos! Viestisi on lähetetty onnistuneesti. Vastaan viestiisi mahdollisimman pian!</p>";
                 } else {
                     form.innerHTML = "<p>Jokin meni pieleen. Yritä uudelleen.</p>";
                 }
