@@ -206,28 +206,26 @@ header {
 }
 /* 🔹 Esittelytekstilaatikko */
 .intro-box {
-    max-width: 900px; /* Aseta maksimileveys, jotta ei veny liikaa */
-    width: 90%; /* Varmistaa skaalautuvuuden mobiilissa */
-    margin: 50px auto; /* Lisää reilusti tilaa ylös ja alas */
-    padding: 30px; /* Lisää sisämarginaalia tekstin ympärille */
+    max-width: 900px; /* Aseta maksimileveys */
+    width: 90%; /* Skaalautuu mobiilissa */
+    margin: 50px auto; /* Lisää ylä- ja alareunaan tilaa */
+    padding: 30px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    overflow: hidden; /* Estää sisällön venymisen */
 }
 
-
-/* Mobiili: korjataan leveys ja marginaalit */
 @media screen and (max-width: 768px) {
     .intro-box {
-        width: 90%; /* Supistetaan, ettei veny reunan yli */
-        max-width: 600px; /* Rajoitetaan enimmäisleveys */
+        width: 90%;
+        max-width: 600px; /* Ei veny reunan yli */
         margin: 40px auto;
         padding: 20px;
-        box-sizing: border-box; /* Estetään ylimääräinen leviäminen */
+        box-sizing: border-box; /* Estää ylimääräisen venymisen */
     }
 }
+
 
 /* ====== PALVELUT-SIVU ====== */
 .services-header {
@@ -385,28 +383,6 @@ footer {
     color: white;
 }
 /* Emilia Burman -otsikon linkin muotoilu */
-.logo-link {
-    color: white !important; /* Pakottaa värin valkoiseksi */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Poistaa violetin värin, jos linkki on jo vierailtu */
-.logo-link:visited {
-    color: white !important;
-}
-
-/* Hover-efekti */
-.logo-link:hover {
-    text-decoration: underline;
-}
-
-/* Jos selain yliajaa värin, varmista että headerin otsikko pysyy valkoisena */
-.nav-container h1 a {
-    color: white !important;
-    text-decoration: none;
-}
-/* Varmistaa, että logo-linkki on valkoinen kaikissa tiloissa */
 .logo-link {
     color: white !important; /* Pakottaa värin valkoiseksi */
     text-decoration: none;
