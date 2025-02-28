@@ -214,6 +214,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     box-sizing: border-box; /* Estää ylimääräisen leviämisen */
+}
 
 .intro-box h3 {
     color: var(--primary-color);
@@ -393,7 +394,7 @@ h1 {
     text-decoration: none; /* Poistaa alleviivauksen */
 }
 
-/* Jos nimi on linkki (esim. <a> sisällä), varmistetaan oikea väri */
+/* Jos nimi on linkki */
 h1 a {
     color: white !important; /* Pakottaa valkoiseksi */
     text-decoration: none !important; /* Poistaa alleviivauksen */
