@@ -129,7 +129,6 @@ header {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-    .cta-button {
     margin-bottom: 50px; /* Enemmän tilaa painikkeen alle */
 }
     /* Mobiilissa vielä enemmän tilaa */
@@ -215,15 +214,14 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     box-sizing: border-box; /* Estää ylimääräisen leviämisen */
-}
-}
-.about-box h3 {
+
+.intro-box h3 {
     color: var(--primary-color);
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.about-box p {
+.intro-box p {
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.5;
