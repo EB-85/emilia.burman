@@ -228,7 +228,13 @@ header {
     font-size: 16px;
     line-height: 1.5;
 }
-
+/* Mobiilissa säilyttää hyvän muodon */
+@media screen and (max-width: 768px) {
+    .intro-box {
+        width: 90%;
+        max-width: 90%;
+        padding: 30px;
+    }
 
 /* ====== PALVELUT-SIVU ====== */
 .services-header {
