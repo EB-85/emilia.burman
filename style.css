@@ -387,6 +387,28 @@ header {
         height: auto;
     }
 }
+    /* Emilia Burman -otsikon muotoilu */
+h1 {
+    color: white; /* Varmistaa, että teksti on valkoinen */
+    text-decoration: none; /* Poistaa alleviivauksen */
+}
+
+/* Jos nimi on linkki (esim. <a> sisällä), varmistetaan oikea väri */
+h1 a {
+    color: white !important; /* Pakottaa valkoiseksi */
+    text-decoration: none !important; /* Poistaa alleviivauksen */
+}
+
+/* Poistaa vierailtujen linkkien violetin värin */
+h1 a:visited {
+    color: white !important;
+}
+
+/* Hover-efekti, jos haluat muutoksen */
+h1 a:hover {
+    text-decoration: underline; /* Voi säilyttää alleviivauksen hoverilla */
+}
+
 
 /* ====== FOOTER ====== */
 footer {
