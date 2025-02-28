@@ -214,6 +214,8 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box; /* Estää ylimääräisen leviämisen */
+}
 }
 .about-box h3 {
     color: var(--primary-color);
@@ -395,27 +397,6 @@ footer {
     padding: 20px 0;
     color: white;
 }
-/* Emilia Burman -otsikon linkin muotoilu */
-.logo-link {
-    color: white !important; /* Pakottaa värin valkoiseksi */
-    text-decoration: none;
-    font-weight: bold;
+box-sizing: border-box; /* Estää ylimääräisen leviämisen */
 }
-
-/* Poistaa violetin värin, jos linkki on jo vierailtu */
-.logo-link:visited {
-    color: white !important;
-}
-
-/* Hover-efekti */
-.logo-link:hover {
-    text-decoration: underline;
-}
-
-/* Varmistaa, että headerin otsikko pysyy valkoisena */
-.nav-container h1 a {
-    color: white !important;
-    text-decoration: none;
-}
-
 
