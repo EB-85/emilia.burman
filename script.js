@@ -12,6 +12,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLinks.classList.toggle("active");
             });
         });
+
+ // Formspree-lomakkeen käsittely
+    const form = document.getElementById("contact-form");
+
+    if (form) { // Tarkistetaan, että lomake löytyy
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Estetään oletustoiminto (uudelleenlataus)
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { "Accept": "application/json" }
+            }).then(response => {
+                if (response.ok) {
+                    form.innerHTML = "<p>Kiitos! Viestisi on lähetetty onnistuneesti.</p>";
+                } else {
+                    form.innerHTML = "<p>Jokin meni pieleen. Yritä uudelleen.</p>";
+                }
+            }).catch(error => {
+                form.innerHTML = "<p>Jokin meni pieleen. Yritä uudelleen.</p>";
+            });
+        });
+    }
 });
-
-
