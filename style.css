@@ -215,16 +215,29 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.about-box h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+.about-box p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Varmistetaan, ettei laatikko veny reunan yli mobiilissa */
 @media screen and (max-width: 768px) {
     .intro-box {
         width: 90%;
-        max-width: 600px; /* Ei veny reunan yli */
+        max-width: 600px;
         margin: 40px auto;
         padding: 20px;
-        box-sizing: border-box; /* Estää ylimääräisen venymisen */
+        box-sizing: border-box; /* Estää ylimääräisen leviämisen */
     }
 }
+
 
 
 /* ====== PALVELUT-SIVU ====== */
