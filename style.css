@@ -207,15 +207,14 @@ header {
 }
 /* 🔹 Esittelytekstilaatikko */
 .intro-box {
-    max-width: 1000px;
-    width: 85%;
-    margin: 60px auto; /* Lisää enemmän tilaa ylös ja alas */
+    max-width: 900px; /* Aseta maksimileveys, jotta ei veny liikaa */
+    width: 90%; /* Varmistaa skaalautuvuuden mobiilissa */
+    margin: 50px auto; /* Lisää reilusti tilaa ylös ja alas */
+    padding: 30px; /* Lisää sisämarginaalia tekstin ympärille */
     background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: block;
 }
 
 .about-box h3 {
@@ -229,11 +228,13 @@ header {
     font-size: 16px;
     line-height: 1.5;
 }
-/* Mobiilinäkymässä pidetään täydellinen */
+/* Mobiili: Varmistetaan, ettei laatikko veny yli reunojen */
 @media screen and (max-width: 768px) {
     .intro-box {
-        width: 90%; /* Mobiilissa ei muutosta */
-        max-width: 90%;
+        width: 90%; /* Supistetaan hieman mobiilissa */
+        max-width: 600px; /* Estetään liian leveä boksi */
+        margin: 40px auto; /* Tasapainotetaan mobiilissa */
+        padding: 20px; /* Pienempi padding, ettei veny liikaa */
     }
 }
 
